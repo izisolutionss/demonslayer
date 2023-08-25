@@ -1,0 +1,621 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+#banner{
+    background: linear-gradient(rgba(0,0,0,0.5),#009688),url(photos/Background-image.jpeg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+.logo{
+    height: 120px;
+    position: absolute;
+    top: 10px;
+    left: 1px;
+}
+.banner-text{
+    text-align: center;
+    color: #fff;
+    padding-top: 180px;
+}
+.banner-text h1{
+    font-size: 90px;
+    font-family: sans-serif;
+}
+.banner-text p{
+    font-size: 20px;
+    font-style: italic;
+    /* font-family: 'Open Sans',sans-serif; */
+}
+.banner-btn{
+    margin: 70px auto 0;
+}
+.banner-btn a{
+    width: 150px;
+    text-decoration: none;
+    display: inline-block;
+    margin: 0 10px;
+    padding: 12px 0;
+    color: #fff;
+    border: .5px solid #fff;
+    position: relative;
+    z-index: 1;
+    transition: color 0.5s;
+}
+.banner-btn a span{
+    width: 0;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #fff;
+    z-index: -1;
+    transition: 1.5s;
+}
+.banner-btn a:hover span{
+    width: 100%;
+}
+.banner-btn a:hover{
+    color: #000;
+}
+
+
+#sideNav{
+    width: 250px;
+    height: 100vh;
+    position: fixed;
+    right: -250px;
+    top: 0;
+    /* background: #009688; */
+    background: linear-gradient(rgba(0,0,0,0.5),#009688);
+    z-index: 2;
+    transition: 0.5s;
+
+}
+nav ul li{
+    list-style: none;
+    margin: 50px 20px;
+}
+nav ul li a{
+    text-decoration: none;
+    color: #fff;
+}
+
+#menuBtn img{
+    width: 50px;
+    height: 50px;
+    margin-top: 10px;
+    /* background: #009688; */
+    text-align: center;
+    position: fixed;
+    right: 20px;
+    top: 10px;
+    border-radius: 50%;
+    border: 2px solid #009688;
+    z-index: 3;
+    cursor: pointer;
+}
+
+
+
+/* MEDIA QUERY */
+
+@media screen and (max-width: 770px){
+    #banner{
+        background: linear-gradient(rgba(0,0,0,0.5),#009688),url(photos/halfscreenimage.jpg);
+    }
+    .banner-text h1{
+        font-size: 30px;
+        font-family: sans-serif;
+    }
+    .banner-btn a{
+        display: block;
+        margin: 20px auto;
+
+    }
+    .logo{
+        height: 80px;
+        left: 0;
+    }
+    .banner-text h1{
+        font-size: 40px;
+    }
+}
+
+
+/* feature */
+
+#characters{
+    width: 100%;
+    padding: 70px 0;
+    /* margin-right: 30px; */
+}
+.title-text{
+    text-align: center;
+    padding-bottom: 70px;
+}
+.title-text p{
+    margin: auto;
+    font-size: 40px;
+    color: #009688;
+    font-weight: bold;
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    font-family: courier;
+}
+.title-text p::after{
+    content: '';
+    width: 50px;
+    height: 35px;
+    background: linear-gradient(#019587,#fff);
+    position: absolute;
+    top: -20px;
+    left: 0;
+    z-index: -1;
+    transform: rotate(10deg); 
+    border-top-left-radius: 35px;
+    border-bottom-right-radius: 35px;
+}
+/* .title-text h1{
+    font-size: 50px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+} */
+.features-box{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    text-align: center;
+}
+.features{
+    flex-basis: 50%;
+}
+.features-img{
+    flex-basis: 50%;
+    margin: auto;
+}
+.features-img img{
+    width: 70%;
+    border-radius: 10px;
+}
+.features h1{
+    text-align: left;
+    margin-bottom: 10px;
+    font-weight: 100;
+    color: #009688;
+}
+.features-description{
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+}
+.features-icon .fa{
+    width: 50px;
+    height: 50px;
+    font-size: 30px;
+    line-height: 50px;
+    border-radius: 8px;
+    color: #009688;
+    border: 1px solid #009688;
+}
+.features-text p{
+    padding: 0 20px;
+    text-align: initial;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    /* font-family: 'Copperplate, Papyrus, fantasy'; */
+    font-size: 20px;
+}
+
+@media screen and (max-width: 770px){
+    .features{
+        flex-basis: 100%;
+    }
+    .features-img{
+        flex-basis: 100%;
+    }
+    .features-img img{
+        width: 100%;
+        border-radius: 10px;
+    }
+    .title-text p{
+        font-size: 30px;
+    }
+}
+
+/* --SEASONS-- */
+
+#seasons{
+    width: 100%;
+    padding: 70px 0;
+    background: #efefef;
+}
+
+.season-box{
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: auto;
+}
+.title-text h1{
+    font-size: 50px;
+    font-family: "Mona Sans","Mona Sans Fallback",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+    font-weight: var(--base-text-weight-normal, 400) !important;
+}
+.season-1{
+    flex-basis: 48%;
+    text-align: center;
+    border-radius: 7px;
+    margin-bottom: 20px;
+    color: #fff;
+    position: relative;
+}
+.season-1 img{
+    width: 100%;
+    border-radius: 7px;
+    height: 400px;
+}
+
+.season-2{
+    flex-basis: 48%;
+    text-align: center;
+    border-radius: 7px;
+    margin-bottom: 20px;
+    color: #fff;
+    position: relative;
+}
+.season-2 img{
+    width: 100%;
+    border-radius: 7px;
+    height: 400px;
+}
+
+.season-3{
+    flex-basis: 48%;
+    text-align: center;
+    border-radius: 7px;
+    margin-bottom: 20px;
+    color: #fff;
+    position: relative;
+}
+.season-3 img{
+    width: 100%;
+    border-radius: 7px;
+    height: 350px;
+}
+
+.season-4{
+    flex-basis: 48%;
+    text-align: center;
+    border-radius: 7px;
+    margin-bottom: 20px;
+    color: #fff;
+    position: relative;
+}
+.season-4 img{
+    width: 100%;
+    border-radius: 7px;
+    height: 350px;
+}
+
+.overlay{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    border-radius: 7px;
+    cursor: pointer;
+    background: linear-gradient(rgba(0,0,0,0.5),#009688);
+    opacity: 0;
+    transition: 1s;
+}
+ /* Seasons */
+.season-1:hover .overlay{
+    opacity: 1;
+}
+
+.season-2:hover .overlay{
+    opacity: 1;
+}
+
+.season-3:hover .overlay{
+    opacity: 1;
+}
+
+.season-4:hover .overlay{
+    opacity: 1;
+}
+
+
+
+.season-description{
+    width: 80%;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    opacity: 0;
+    transition: 1s;
+    transform: translateX(-50%);
+}
+.season-description h3{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+hr{
+    background: #fff;
+    height: 2px;
+    border: 0;
+    margin: 15px auto;
+    width: 60%;
+}
+
+.season-description p{
+    font-size: 14px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.season-1:hover .season-description{
+    bottom: 40%;
+    opacity: 1;
+}
+
+.season-2:hover .season-description{
+    bottom: 40%;
+    opacity: 1;
+}
+
+.season-3:hover .season-description{
+    bottom: 40%;
+    opacity: 1;
+}
+
+.season-4:hover .season-description{
+    bottom: 40%;
+    opacity: 1;
+}
+
+@media screen and (max-width: 770px){
+    .title-text h1{
+        font-size: 23px;
+        font-family: "Mona Sans","Mona Sans Fallback",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+        font-weight: var(--base-text-weight-normal, 400) !important;;
+    }
+    .season-1{
+        flex-basis: 100%;
+        margin-bottom: 50px;
+        text-align: center;
+    }
+    .season-2{
+        flex-basis: 100%;
+        margin-bottom: 50px;
+        text-align: center;
+    }
+    .season-3{
+        flex-basis: 100%;
+        margin-bottom: 50px;
+        text-align: center;
+    }
+    .season-4{
+        flex-basis: 100%;
+        margin-bottom: 50px;
+        text-align: center;
+    }
+
+/* Hovers */
+
+
+    .season-1:hover .season-description{
+        bottom: 20% !important;
+        opacity: 1;
+    }
+    
+    .season-2:hover .season-description{
+        bottom: 20% !important;
+        opacity: 1;
+    }
+    
+    .season-3:hover .season-description{
+        bottom: 20% !important; 
+        opacity: 1;
+    }
+    
+    .season-4:hover .season-description{
+        bottom: 20% !important;
+        opacity: 1;
+    }
+}
+
+
+
+#about{
+    width: 100%;
+    padding: 70px 0;
+    /* background: linear-gradient(rgb(232, 221, 221),#c11ad7b5); */
+    background: #efefef;
+}
+
+/* .summary{
+    background: linear-gradient(rgba(238, 245, 31, 0.644),#009688);
+} */
+
+.summary p{
+    font-size: 20px;
+    font-family: proxima-nova,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-feature-settings: var(--font-headline-feature-settings);
+    font-weight: 350;
+    letter-spacing: -.02em;
+    line-height: 1.4;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    text-align: left;
+    font-style: initial;
+}
+
+.border{
+    border: 5px solid #efefef;
+    position: relative;
+    margin-left: 20px;
+    margin-right: 20px;
+    border-radius: 20px;
+}
+
+@media screen and (max-width: 770px){
+    .summary p{
+        font-size: 15px;
+        text-align: center;
+        font-style: initial;
+        font-weight: 500;
+    }
+}
+
+
+/* footer */
+
+#footer{
+    padding: 100px 0 20px;
+    background: #efefef;
+    position: relative;
+}
+
+.footer-row{
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.footer-left,.footer-right{
+    flex-basis: 45%;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+.footer-left{
+    font-family: 'Muli',sans-serif;
+}
+.footer-left h1{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.footer-right h1{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.footer-right{
+    text-align: right;
+    font-family: 'Muli',sans-serif;
+}
+.footer-row h1{
+    text-align: center;
+    margin: 10px 0;
+    margin-top: 130px;
+}
+.footer-row p{
+    line-height: 35px;
+    text-align: center;
+}
+
+.footer-left .fa,.footer-right .fa{
+    font-size: 20px;
+    color: #009688;
+    margin: 10px;
+}
+
+.footer-img{
+    margin-top: 150px;
+    max-width: 250px;
+    opacity: 0.5;
+    position: absolute;
+    left: 50%;
+    top: 35%;
+    transform: translate(-50%, -50%);
+}
+.social-links{
+    text-align: center;
+}
+.social-links .fa{
+    height: 40px;
+    width: 40px;
+    font-size: 20px;
+    line-height: 40px;
+    border: 1px solid #009688;
+    margin: 40px 5px 0;
+    color: #009688;
+    cursor: pointer;
+    transition: .5s;
+}
+.social-links .fa:hover{
+    background: #009688;
+    color: #fff;
+    transform: translateY(-7px);
+}
+
+
+
+
+@media screen and (max-width: 770px){
+    .footer-img{
+        margin-top:  10px;
+        position: absolute;
+    }
+    .footer-left, .footer-right{
+        flex-basis: 100%;
+        font-size: 14px;
+    }
+    .footer-img{
+        top: 25%;
+    }
+    .footer-right{
+        text-align: left;
+        margin-right: 0;
+        margin-left: 0;
+        margin-top: -50px;
+    }
+    .footer-row p{
+        line-height: 35px;
+        font-size: 12px;
+    }
+}
+
+/* .right-col img{
+    height: 49px;
+    width: 49px;
+    border-radius: 50%;
+    border: 3px solid #000000;
+} */
+
+#icon{
+    width: 50px;
+    height: 50px;
+    margin-top: 10px;
+    /* background: #009688; */
+    text-align: center;
+    position: fixed;
+    right: 20px;
+    top: 10px;
+    border-radius: 50%;
+    border: 2px solid #009688;
+    z-index: 3;
+    cursor: pointer;
+    margin-top: 2.5cm;
+}
+
+@media screen and (max-width: 770px){
+    #icon{
+        width: 50px;
+    height: 50px;
+    margin-top: 10px;
+    /* background: #009688; */
+    text-align: center;
+    position: fixed;
+    right: 20px;
+    top: 10px;
+    border-radius: 50%;
+    border: 2px solid #009688;
+    z-index: 3;
+    cursor: pointer;
+    margin-top: 2.5cm;
+    }
+}
