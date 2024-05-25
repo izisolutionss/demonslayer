@@ -602,6 +602,15 @@ hr{
     margin-top: 2.5cm;
 }
 
+.footer {
+    margin-top: 100px;
+    text-align: center;
+    padding: 20px 0;
+    background-color: #434343;
+    color: #fff;
+}
+
+
 @media screen and (max-width: 770px){
     #icon{
         width: 50px;
